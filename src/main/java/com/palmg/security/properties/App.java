@@ -6,10 +6,10 @@ import org.slf4j.LoggerFactory;
 import com.palmg.security.properties.exception.FileWriteException;
 
 /**
- * 独立允许操作入口, 通过Jvm命令可以指定要操作的内容。<br>
- * --option-[params]表示操作。[params]为具体参数。如下：<br>
- * key：生成加密密钥。注意当前密钥的profile。 data：根据properties文件生成加密文件。注意对应的配置参数。
- * --params-[key]-[value] 表示参数。 [key]为具体参数名称。 [value]为参数数值。
+ * <b>独立允许操作入口, 通过Jvm命令可以指定要操作的内容。</b><br>
+ * <b>--option-[params]表示操作。[params]为具体参数。如下：</b><br>
+ * key：生成加密密钥。注意当前密钥的profile。 data：根据properties文件生成加密文件。注意对应的配置参数。<br>
+ * <b>--params-[key]-[value] 表示参数。 [key]为具体参数名称。 [value]为参数数值。</b><br>
  * 例如：--params-scheme-AES 如下：<br>
  * scheme：加密方案，目前仅仅提供AES方案。<br>
  * keyFileName：生成的加密密钥文件的名称，默认为PalmgEnvCert.key。<br>
@@ -19,7 +19,9 @@ import com.palmg.security.properties.exception.FileWriteException;
  * profileFlag：加密替换标记。默认为${profile}。<br>
  * propertiesFileName：加密文件的名称。默认为properties-${profile}.data。${profile}会使用密钥文件的profile替换。<br>
  * seed：密钥生成的随机种子。取前16位。<br>
- * 
+ * <b>查看例子：</b></br>
+ * 生成key：--option-key --params-profile-dev <br>
+ * 生成data：--option-data --params-profile-dev<br>
  * @param args
  * @throws FileWriteException
  * @throws IOException
